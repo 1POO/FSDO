@@ -9,14 +9,14 @@ ctx_mode = 'video_sub_simple_tef'
 v_feat_types = 'slowfast_clip_object'
 t_feat_type = 'clip'
 s_feat_type = 'clip'
-results_root = '/home/zfw/APP/lppp/TR-DETR-master/results_charadesSTA/test_set_all_42_0.00001_0.6_0.5'
+results_root = '../results_charadesSTA'
 exp_id = 'exp'
 
-train_path = '/home/zfw/APP/lppp/TR-DETR-master/data/charades/charades_train_release.jsonl'
-eval_path = '/home/zfw/APP/lppp/TR-DETR-master/data/charades/charades_test_release.jsonl'
+train_path = '../data/charades/charades_train_release.jsonl'
+eval_path = '../data/charades/charades_test_release.jsonl'
 eval_split_name = 'test'
 
-feat_root = '/home/zfw/APP/lppp/TR-DETR-master/features/charades'
+feat_root = ../features/charades'
 
 # 处理视频特征参数
 v_feat_dim = 0
@@ -87,9 +87,7 @@ command = [
     '--contrastive_align_loss_coef', '0.002',
     '--lw_saliency', '1.5',
     '--eval_bsz', str(eval_bsz),
-    '--seed', str(seed),
-    '--resume',"/home/zfw/APP/lppp/TR-DETR-master/results_charadesSTA/test_set_all_42_0.00001_0.6_0.5/charadesSTA-video_sub_simple_tef-exp-2025_08_06_18_57_07/model_best.ckpt"
-]
+    '--seed', str(seed)]
 
 # 添加用户输入的额外参数
 command += sys.argv[1:]
