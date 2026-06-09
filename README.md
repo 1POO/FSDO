@@ -17,17 +17,19 @@
 
 ### 0. Clone and setup
 
-```bash
+```
 git clone <your-repo-url> fsdo
 cd fsdo
+```
 
 ### 1. Prepare datasets
 Download the features files or extract the features independently using the method described in the paper.
 
 ### 2. Install dependencies
 Python version 3.10 is required. Install dependencies using:
-```bash
+```
 pip install -r requirements.txt
+```
 
 ## QVHighlights
 
