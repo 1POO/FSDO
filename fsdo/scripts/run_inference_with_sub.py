@@ -8,15 +8,17 @@ def main():
     parser = argparse.ArgumentParser(description='运行推理脚本')
     parser.add_argument('--eval_split_name', type=str, default='test',
                        help='评估数据集分割名称 (默认: test)')
+    parser.add_argument('--ckpt_path', type=str, required=True,
+                       help='模型检查点路径 (必需)')
     
     # 解析已知参数（只解析我们关心的参数）
     args, remaining_args = parser.parse_known_args()
     
-    # 使用解析得到的 eval_split_name
+    # 使用解析得到的参数
     eval_split_name = args.eval_split_name
+    ckpt_path = args.ckpt_path
     
     # 硬编码固定参数配置
-    ckpt_path = ("...")
     s_feat_dim = 512
     s_feat_dir = "./features/qvhighlights/clip_sub_features"
     eval_path = f"./data/highlight_{eval_split_name}_release.jsonl"
