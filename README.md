@@ -64,3 +64,12 @@ Similar to QVHighlights, you can train the model on the TVSum dataset:
 ```
 python fsdo/scripts/tvsum/run_train_tvsum.py
 ```
+## Charades-STA
+
+### Training
+
+Similar to QVHighlights, you can train the model on the Charades-STA dataset:
+
+```
+python fsdo/scripts/charades/run_train_charades.py
+```
