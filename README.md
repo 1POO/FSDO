@@ -48,11 +48,10 @@ The best validation accuracy is achieved at the last epoch.
 After training, you can generate `hl_val_submission.jsonl` and `hl_test_submission.jsonl` for validation and test sets by running:
 
 ```
-bash tr_detr/scripts/inference.sh results/{direc}/model_best.ckpt 'val'
-bash tr_detr/scripts/inference.sh results/{direc}/model_best.ckpt 'test'
+python fsdo/scripts/run_train_with_sub.py --ckpt_path /path/to/your/checkpoint.pth  --eval_split_name val
+python fsdo/scripts/run_train_with_sub.py --ckpt_path /path/to/your/checkpoint.pth  --eval_split_name test 
 ```
-
-Replace `{direc}` with the path to your saved checkpoint. For more details on submission, see [standalone_eval/README.md](standalone_eval/README.md).
+For more details on submission, see [standalone_eval/README.md](standalone_eval/README.md).
 
 ----------
 
@@ -63,6 +62,5 @@ Replace `{direc}` with the path to your saved checkpoint. For more details on su
 Similar to QVHighlights, you can train the model on the TVSum dataset:
 
 ```
-bash tr_detr/scripts/tvsum/train_tvsum.sh   # Only video
-bash tr_detr/scripts/tvsum/train_tvsum_audio.sh   # Video + audio
+python fsdo/scripts/tvsum/run_train_tvsum.py
 ```
