@@ -34,10 +34,6 @@ def main():
     print("[DEBUG] a_feat_dir:", a_feat_dir)
     print("[DEBUG] a_feat_dim:", a_feat_dim)
 
-    # 环境变量配置
-    project_path = "..."
-    original_pythonpath = os.environ.get("PYTHONPATH", "")
-    os.environ["PYTHONPATH"] = f"{project_path}:{original_pythonpath}:."
 
     # 构建执行命令
     base_command = [
